@@ -17,6 +17,7 @@ import re
 import gzip
 
 
+ver = '1.0:30/04/23'
 
 # Define the base URL
 base_url = 'https://public.bybit.com/trading/'
