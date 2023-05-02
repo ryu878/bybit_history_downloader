@@ -18,16 +18,17 @@ import requests
 from bs4 import BeautifulSoup
 
 
-ver = '1.2:02/05/23'
+# Set the file version
+ver = '1.3:02/05/23'
 
 # Define the base URL
 base_url = 'https://public.bybit.com/trading/'
 
 # Select the start date
-start_date = '2023-01-01'
+start_date = '2023-05-01'
 
 # Set the list of coins
-coins = ['BTCUSDT', 'ETHUSDT']
+coins = []
 
 # Create a function to download the files
 def download_file(url, local_path):
@@ -35,9 +36,11 @@ def download_file(url, local_path):
         data = response.read()
         out_file.write(data)
 
+
 # Create a function to check if a file exists
 def file_exists(local_path):
     return os.path.exists(local_path)
+
 
 # Make a GET request to the base URL and parse the HTML
 response = requests.get(base_url)
@@ -54,9 +57,6 @@ for link in links:
     if href.endswith('/'):
         # Get the directory name
         dir_name = href[:-1]
-        # Check if the directory name is in the coins list
-        if dir_name not in coins:
-            continue
         # Create the directory locally if it doesn't exist
         if not os.path.exists(dir_name):
             os.mkdir(dir_name)
@@ -103,7 +103,6 @@ for link in links:
                         # Rename the file to remove the .csv extension
                         os.rename(archive_path, extracted_path)
                         print('Renamed:', archive_path, 'to', extracted_path)
-
             else:
                 # Skip the file
                 print('Skipping download of', csv_name, '- date is before start date.')
