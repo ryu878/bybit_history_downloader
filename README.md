@@ -1,6 +1,17 @@
 # Bybit Historical Market Data Downloader
 Public market data, including the orderbook, candles, trades and funding rates.
 
+## Usage
+
+You can set a list of coins you want to download and the start date.
+
+![image](https://user-images.githubusercontent.com/81808867/235582232-9a2d8c90-3bab-46bb-9713-bc4ac86965bc.png)
+
+If you want to download all the coins just set list to empty.
+
+![image](https://user-images.githubusercontent.com/81808867/235582330-889566e5-0d8e-4a9e-bcda-3b42d5d74a93.png)
+
+
 
 ## Requirements
 <code>pip install beautifulsoup4</code>
