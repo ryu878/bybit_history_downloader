@@ -29,7 +29,7 @@ To contact me:
 
 Discord: https://discord.gg/zSw58e9Uvf
 
-Telegram: https://t.me/aadresearch
+Join Bybit and receive up to $6,045 in Bonuses: https://www.bybit.com/invite?ref=X2PZB
 
 
 ## VPS for bots and scripts
